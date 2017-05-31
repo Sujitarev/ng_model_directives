@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+	<script src="js/angular.js">
+        /*
+         Show the Scope value inside the view with ng-model directives.
+         a. Name
+         b. EmployeeID
+         c. Designation
+         */
+	</script>
+
+	<title> view with ng_model</title>
+
+	<script type="text/javascript">
+	
+		var myApp = angular.module('myApp', []);
+
+		myApp.controller('myController', function ($scope) {
+			$scope.employee={
+				name : 'Sameer',
+				employeeId : '123456',
+				designation : 'MEAN Developer'
+			};
+		});	
+
+	</script>
+
+</head>
+
+<body>
+
+	<center>
+
+			<div ng-controller="myController">
+
+				<table border="2px">
+					<tr>
+						<th>
+							Name
+						</th>
+						<th>
+							Employee Id
+						</th>
+						<th>
+							Designation
+						</th>
+					</tr>
+					<tr>
+						<td >
+							<span > {{employee.name}} </span>
+						</td>
+						<td >
+							<span > {{employee.employeeId}} </span>
+						</td>
+						<td >
+							<span > {{employee.designation}}</span>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+					
+	</center>
+
+
+</body>
+</html>
